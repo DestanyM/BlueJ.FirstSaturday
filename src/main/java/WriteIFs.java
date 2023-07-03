@@ -12,10 +12,10 @@ public class WriteIFs
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
-        if(player1.isAlive() == false){
+        if(!player1.isAlive()){
              displayGameOver(player1);
         }
-     
+
     }
     
     public String thermoSTAT(int room) {
