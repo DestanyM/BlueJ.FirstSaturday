@@ -3,8 +3,8 @@ package src.main.java;
 /**
  * Write a description of class src.main.java.WriteIFs here.
  *
- * @author (your name)
- * @version (a version number or a date)
+ * @author Destany McClellan
+ * @version 6/2/23
  */
 public class WriteIFs
 {
@@ -12,6 +12,9 @@ public class WriteIFs
     public void playerDied(boolean player1) {
         // Write an IF statement that checks “player1.isAlive()” 
         // and if that’s false, calls “displayGameOver(player1)”
+        if(player1.isAlive() == false){
+             displayGameOver(player1);
+        }
      
     }
     
@@ -20,8 +23,11 @@ public class WriteIFs
         // “temperature(room)” and if that check is less than 70, 
         // calls “heatOn()” else calls “coolOn()”
 
-
-        
+        if (room < 70) {
+            heatOn();
+        }else{
+            coolOn();
+        }
         return this.ss;
     }
 
@@ -31,13 +37,17 @@ public class WriteIFs
         // AND 
         // “insideTemp()” is less than 62, 
         // calls “startAFire(fireplace1)”
-
+        if (outsideTemp() < 50 && insideTemp() < 62){
+            startAFire(fireplace1);
+        }
     }
 
     public void checkFuel(double fuelLevel) {
         // Write an IF statement that checks “fuelLevel” 
         // and if that check is less than 0.08, calls “refuel()”
-
+        if (fuelLevel < 0.08){
+            refuel();
+        }
     }
 
 
